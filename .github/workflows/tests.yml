@@ -38,7 +38,7 @@ jobs:
 
             -   name: Install dependencies
                 run: |
-                    composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
+                    composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --ignore-platform-reqs
 
             -   name: Execute tests
                 run: vendor/bin/pest
